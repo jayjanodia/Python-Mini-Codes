@@ -1,0 +1,45 @@
+Task:
+You are to implement a golf game program as outlined in the following description
+
+Program Features:
+
+You are required to create a Python 3 program for a game of Tropical Golf. The player will be attempting to get the ball in the hole using the least amount of swings.
+The rules and gameplay for the program are as follows:
+
+The ball starts 230m away from the hole
+The player chooses one of three clubs, each of which hits a different average distance
+Every hit travels directly towards the hole in a straight line (this is a simple golf game, we’re only playing in 2D)
+Once the ball is in the hole the player is told how many swings it took and whether they are over or under par
+‘Par’ is the estimate of how many swings a game should take for an average player. Par for this game is 5.
+The player may use as many swings as is necessary to get the ball in the hole
+
+For each swing, the player chooses a club and then the program generates the distance hit for each shot, updating the distance to the hole accordingly. After each swing the distance the ball travelled, and the distance remaining is displayed along with the current score using something like:
+
+Your shot went 103m. You are 127m from the hole, after 1 shot/s.
+
+The player has three clubs to choose from for each shot. Each club hits the ball a set average distance, but the actual distance randomly varies between 80% and 120% of the average. You will need to generate a random number between 80 and 120 to do this.
+
+The clubs and their average distances are:
+Driver:        100m (actual distance will be a random number between 80 and 120)
+Iron:          30m  (actual distance will be a random number between 24 and 36)
+Putter:        10m  (see below for actual distance)
+
+When the ball is inside 10m and the putter is used, the shot will be between 80% and 120% of the distance to the hole, not the club’s average distance. The minimum distance the putter can hit is 1m (no 0m hits). All distances are whole numbers.
+
+The user will enter the first letter of a club to choose it (i.e. ‘I’ or ‘i’ for the Iron)
+
+If an invalid club is chosen, the player is asked to make a valid choice.
+
+The ball cannot be a negative distance to the hole. Whether it is in front of or behind the hole, it is still a positive distance to the hole.
+
+Play proceeds until the ball is in the hole (distance to the hole is zero), and then the program informs the user of their score.
+
+The players score is the number of shots taken to get the ball in the hole. The final output will display the number of shots taken and how this relates to par. If their score is less than 5 (par for this hole) is “under par”, equal to 5 is called “par”, and more than 5 is “over par”. See sample output for exact outputs.
+.. After 10 hits, the ball is in the hole! Disappointing. You are 5 over par.
+.. After 5 hits, the ball is in the hole! And that’s par.
+.. After 3 hits, the ball is in the hole! Congratulations,you are 2under par.
+
+
+
+Python file:
+You are to divide your solution into functions, following the principles shown in class. These may involve one for each menu option (other than Quit) as well as functions for parts of the program (e.g. calculating the current player balance could be implemented as a function).
